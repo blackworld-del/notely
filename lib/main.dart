@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notely/constants/colors.dart';
 
 void main(List<String> args) {
   runApp(
@@ -12,7 +13,12 @@ class NotelyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData.light().copyWith(),
+      theme: ThemeData(
+        scaffoldBackgroundColor: NotelyColors.primaryColor,
+        useMaterial3: true,
+        fontFamily: "Nunito",
+        primaryColor: NotelyColors.buttonTextColor,
+      ),
     );
   }
 }
