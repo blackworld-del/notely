@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 class NotelyColors {
-  static Color primaryColor = HexColor("#F8EEE2");
+  static Color primaryColor = Color.fromARGB(255, 255, 229, 196);
   static Color seconderyColor = HexColor("#FFFDFA");
   static Color fontBoldColor = HexColor("#403B36");
   static Color fontLightColor = HexColor("#595550");
