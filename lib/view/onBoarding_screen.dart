@@ -1,8 +1,13 @@
+// ignore_for_file: unnecessary_import
+
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:notely/constants/colors.dart';
 import 'package:notely/utils/size/deviceSize.dart';
 import 'package:notely/utils/size/space.dart';
 import 'package:notely/utils/widgets/custom_button.dart';
+import 'package:notely/view/auth_create.dart';
+import 'package:notely/view/auth_login.dart';
 
 class NotelyOnBoardingScreen extends StatelessWidget {
   const NotelyOnBoardingScreen({super.key});
@@ -20,7 +25,6 @@ class NotelyOnBoardingScreen extends StatelessWidget {
           ),
         ),
       ),
-      backgroundColor: NotelyColors.primaryColor,
       body: Container(
         width: double.infinity,
         child: Padding(
@@ -61,20 +65,40 @@ class NotelyOnBoardingScreen extends StatelessWidget {
               SizedBox(
                 height: DeviceSize.getDeviceHeight(context: context) * 0.09,
               ),
-              customButton(
-                text: "Get Started",
-                height: DeviceSize.getDeviceHeight(context: context) * 0.07,
-                width: double.infinity,
-                backgroundColor: NotelyColors.buttonColor,
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) {
+                      return NotelyAuthCreateScreen();
+                    }),
+                  );
+                },
+                child: customButton(
+                  text: "Get Started",
+                  height: DeviceSize.getDeviceHeight(context: context) * 0.07,
+                  width: double.infinity,
+                  backgroundColor: NotelyColors.buttonColor,
+                ),
               ),
               SizedBox(
                 height: DeviceSize.getDeviceHeight(context: context) * 0.015,
               ),
-              Text(
-                "Already have an account?",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: NotelyColors.buttonColor,
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) {
+                      return NotelyAuthLoginScreen();
+                    }),
+                  );
+                },
+                child: Text(
+                  "Already have an account?",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: NotelyColors.buttonColor,
+                  ),
                 ),
               ),
             ],

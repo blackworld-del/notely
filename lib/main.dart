@@ -20,7 +20,7 @@ class NotelyApp extends StatelessWidget {
         appBarTheme: AppBarTheme(
           backgroundColor: NotelyColors.primaryColor,
         ),
-        // scaffoldBackgroundColor: NotelyColors.primaryColor,
+        scaffoldBackgroundColor: NotelyColors.primaryColor,
         useMaterial3: true,
         fontFamily: "Nunito",
       ),

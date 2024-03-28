@@ -11,12 +11,13 @@ dependencies:
   cupertino_icons: ^1.0.6
   flutter:
     sdk: flutter
+  flutter_svg: ^2.0.10+1
   hexcolor: ^3.0.1
   hive: ^2.2.3
   hive_flutter: ^1.1.0
-  flutter_svg: ^2.0.10+1
 
 dev_dependencies:
+  bloc: ^8.1.4
   build_runner: ^2.4.8
   dio: ^5.4.2
   flutter_lints: ^3.0.0
@@ -28,7 +29,6 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/
-    - assets/svgs/
   fonts:
     - family: Nunito
       fonts:
