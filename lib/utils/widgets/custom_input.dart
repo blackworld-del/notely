@@ -34,13 +34,16 @@ Widget customInputField({
 
 Widget authText({
   required String text,
+  required Color color,
+  required double size,
 }) {
   return Text(
+    textAlign: TextAlign.start,
     text,
     style: TextStyle(
       fontWeight: FontWeight.bold,
-      fontSize: 13,
-      color: NotelyColors.fontBoldColor,
+      fontSize: size,
+      color: color,
     ),
   );
 }

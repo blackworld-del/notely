@@ -79,6 +79,7 @@ class NotelyOnBoardingScreen extends StatelessWidget {
                   height: DeviceSize.getDeviceHeight(context: context) * 0.07,
                   width: double.infinity,
                   backgroundColor: NotelyColors.buttonColor,
+                  textColor: Colors.white,
                 ),
               ),
               SizedBox(

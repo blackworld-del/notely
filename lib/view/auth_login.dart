@@ -68,7 +68,7 @@ class _NotelyAuthLoginScreenState extends State<NotelyAuthLoginScreen> {
                 SizedBox(
                   height: DeviceSize.getDeviceHeight(context: context) * 0.07,
                 ),
-                authText(text: "Username / Email"),
+                authText(text: "Username / Email" , color: NotelyColors.fontBoldColor,size: 13,),
                 SizedBox(
                   height: DeviceSize.getDeviceHeight(context: context) * 0.01,
                 ),
@@ -79,7 +79,7 @@ class _NotelyAuthLoginScreenState extends State<NotelyAuthLoginScreen> {
                 SizedBox(
                   height: DeviceSize.getDeviceHeight(context: context) * 0.02,
                 ),
-                authText(text: "Password"),
+                authText(text: "Password",color: NotelyColors.fontBoldColor,size: 13,),
                 SizedBox(
                   height: DeviceSize.getDeviceHeight(context: context) * 0.01,
                 ),
@@ -91,10 +91,11 @@ class _NotelyAuthLoginScreenState extends State<NotelyAuthLoginScreen> {
                   height: DeviceSize.getDeviceHeight(context: context) * 0.09,
                 ),
                 customButton(
-                  text: "Create Account",
+                  text: "Login",
                   height: DeviceSize.getDeviceHeight(context: context) * 0.07,
                   width: double.infinity,
                   backgroundColor: NotelyColors.buttonColor,
+                  textColor: Colors.white,
                 ),
                 SizedBox(
                   height: DeviceSize.getDeviceHeight(context: context) * 0.015,

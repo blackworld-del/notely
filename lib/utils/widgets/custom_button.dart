@@ -5,6 +5,7 @@ Widget customButton({
   required double width,
   required Color backgroundColor,
   required String text,
+  required Color textColor,
 }) {
   return Container(
     height: height,
@@ -14,7 +15,7 @@ Widget customButton({
       text,
       style: TextStyle(
         fontWeight: FontWeight.w900,
-        color: Colors.white,
+        color: textColor,
         fontSize: 19,
       ),
     )),

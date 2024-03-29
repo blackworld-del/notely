@@ -70,7 +70,11 @@ class _NotelyAuthCreateScreenState extends State<NotelyAuthCreateScreen> {
               SizedBox(
                 height: DeviceSize.getDeviceHeight(context: context) * 0.07,
               ),
-              authText(text: "Email"),
+              authText(
+                text: "Email",
+                color: NotelyColors.fontBoldColor,
+                size: 13,
+              ),
               SizedBox(
                 height: DeviceSize.getDeviceHeight(context: context) * 0.01,
               ),
@@ -81,7 +85,11 @@ class _NotelyAuthCreateScreenState extends State<NotelyAuthCreateScreen> {
               SizedBox(
                 height: DeviceSize.getDeviceHeight(context: context) * 0.02,
               ),
-              authText(text: "Username"),
+              authText(
+                text: "Username",
+                color: NotelyColors.fontBoldColor,
+                size: 13,
+              ),
               SizedBox(
                 height: DeviceSize.getDeviceHeight(context: context) * 0.01,
               ),
@@ -92,7 +100,11 @@ class _NotelyAuthCreateScreenState extends State<NotelyAuthCreateScreen> {
               SizedBox(
                 height: DeviceSize.getDeviceHeight(context: context) * 0.02,
               ),
-              authText(text: "Password"),
+              authText(
+                text: "Password",
+                color: NotelyColors.fontBoldColor,
+                size: 13,
+              ),
               SizedBox(
                 height: DeviceSize.getDeviceHeight(context: context) * 0.01,
               ),
@@ -117,6 +129,7 @@ class _NotelyAuthCreateScreenState extends State<NotelyAuthCreateScreen> {
                   height: DeviceSize.getDeviceHeight(context: context) * 0.07,
                   width: double.infinity,
                   backgroundColor: NotelyColors.buttonColor,
+                  textColor: Colors.white,
                 ),
               ),
               SizedBox(
