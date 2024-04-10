@@ -81,6 +81,7 @@ class _NotelyAuthCreateScreenState extends State<NotelyAuthCreateScreen> {
               customInputField(
                 hintText: "Email",
                 controller: email_controller,
+                background: NotelyColors.seconderyColor.withOpacity(0.6),
               ),
               SizedBox(
                 height: DeviceSize.getDeviceHeight(context: context) * 0.02,
@@ -96,6 +97,7 @@ class _NotelyAuthCreateScreenState extends State<NotelyAuthCreateScreen> {
               customInputField(
                 hintText: "Username",
                 controller: username_controller,
+                background: NotelyColors.seconderyColor.withOpacity(0.6),
               ),
               SizedBox(
                 height: DeviceSize.getDeviceHeight(context: context) * 0.02,
@@ -111,6 +113,7 @@ class _NotelyAuthCreateScreenState extends State<NotelyAuthCreateScreen> {
               customInputField(
                 hintText: "Password",
                 controller: password_controller,
+                background: NotelyColors.seconderyColor.withOpacity(0.6),
               ),
               SizedBox(
                 height: DeviceSize.getDeviceHeight(context: context) * 0.09,

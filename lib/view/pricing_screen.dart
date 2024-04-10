@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:notely/constants/colors.dart';
+import 'package:notely/constants/pricing_plan.dart';
 import 'package:notely/utils/size/deviceSize.dart';
 import 'package:notely/utils/size/space.dart';
 import 'package:notely/utils/widgets/custom_button.dart';
 import 'package:notely/utils/widgets/custom_input.dart';
 import 'package:notely/view/home.dart';
+import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 
 class NotelyPricingScreen extends StatefulWidget {
   const NotelyPricingScreen({super.key});
@@ -15,10 +17,6 @@ class NotelyPricingScreen extends StatefulWidget {
 
 class _NotelyPricingScreenState extends State<NotelyPricingScreen> {
   int selectedChipIndex = 0;
-  List<String> pricingPlan = [
-    "Annual\n\$79.99\nper year",
-    "Monthly\n\$7.99\nper month"
-  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,7 +43,7 @@ class _NotelyPricingScreenState extends State<NotelyPricingScreen> {
                 );
               },
               icon: Icon(
-                Icons.cancel,
+                FeatherIcons.x,
                 color: NotelyColors.buttonColor,
               ))
         ],
@@ -115,8 +113,8 @@ class _NotelyPricingScreenState extends State<NotelyPricingScreen> {
                     crossAxisCount: 2,
                     crossAxisSpacing: 10.0,
                   ),
-                  itemCount:
-                      pricingPlan.length, // Total number of items in the grid
+                  itemCount: PricingPlan
+                      .plan.length, // Total number of items in the grid
                   itemBuilder: (BuildContext context, int index) {
                     return GestureDetector(
                       onTap: () {
@@ -139,8 +137,32 @@ class _NotelyPricingScreenState extends State<NotelyPricingScreen> {
                           ),
                         ),
                         child: Center(
-                          child: Text(
-                            pricingPlan[index],
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                PricingPlan.plan[index]["type"].toString(),
+                              ),
+                              SpaceSize.setHeightSpace(
+                                value: DeviceSize.getDeviceHeight(
+                                        context: context) *
+                                    0.008,
+                              ),
+                              authText(
+                                text:
+                                    PricingPlan.plan[index]["price"].toString(),
+                                color: NotelyColors.fontBoldColor,
+                                size: 19,
+                              ),
+                              SpaceSize.setHeightSpace(
+                                value: DeviceSize.getDeviceHeight(
+                                        context: context) *
+                                    0.008,
+                              ),
+                              Text(
+                                PricingPlan.plan[index]["duration"].toString(),
+                              ),
+                            ],
                           ),
                         ),
                       ),

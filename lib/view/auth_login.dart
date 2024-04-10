@@ -75,6 +75,7 @@ class _NotelyAuthLoginScreenState extends State<NotelyAuthLoginScreen> {
                 customInputField(
                   hintText: "Username or email address",
                   controller: identifier_controller,
+                  background: NotelyColors.seconderyColor.withOpacity(0.6),
                 ),
                 SizedBox(
                   height: DeviceSize.getDeviceHeight(context: context) * 0.02,
@@ -86,6 +87,7 @@ class _NotelyAuthLoginScreenState extends State<NotelyAuthLoginScreen> {
                 customInputField(
                   hintText: "Password",
                   controller: password_controller,
+                  background: NotelyColors.seconderyColor.withOpacity(0.6),
                 ),
                 SizedBox(
                   height: DeviceSize.getDeviceHeight(context: context) * 0.09,

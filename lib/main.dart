@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:notely/constants/colors.dart';
+import 'package:notely/data/api/auth_api.dart';
 import 'package:notely/view/onBoarding_screen.dart';
 
-void main(List<String> args) {
+void main(List<String> args) async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await AuthApi.authInitApi();
   runApp(
     const NotelyApp(),
   );

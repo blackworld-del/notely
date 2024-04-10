@@ -7,10 +7,11 @@ import 'package:notely/constants/colors.dart';
 Widget customInputField({
   required String hintText,
   required TextEditingController controller,
+  required Color background,
 }) {
   return Container(
     decoration: BoxDecoration(
-      color: NotelyColors.seconderyColor.withOpacity(0.6), // Background color
+      color: background, // Background color
       borderRadius: BorderRadius.circular(10.0), // Optional: border radius
     ),
     padding: EdgeInsets.symmetric(horizontal: 15.0), // Optional: padding
@@ -21,6 +22,7 @@ Widget customInputField({
         fontWeight: FontWeight.bold,
         color: NotelyColors.fontLightColor,
       ),
+      maxLines: null,
       decoration: InputDecoration(
         hintText: hintText,
         hintStyle: TextStyle(

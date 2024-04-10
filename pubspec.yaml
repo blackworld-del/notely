@@ -11,7 +11,9 @@ dependencies:
   cupertino_icons: ^1.0.6
   flutter:
     sdk: flutter
+  flutter_feather_icons: ^2.0.0+1
   flutter_svg: ^2.0.10+1
+  font_awesome_flutter: ^10.7.0
   hexcolor: ^3.0.1
   hive: ^2.2.3
   hive_flutter: ^1.1.0
